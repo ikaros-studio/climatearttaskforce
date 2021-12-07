@@ -28,19 +28,6 @@
                 to="/globalsealevels"
                 ><b>Global sea levels</b> <small>Installation</small></b-link
               >
-              <hr variant="light" class="border-light" />
-              <b-link
-                class="my-2 text-decoration-none text-white d-block"
-                to="/globalsealevels"
-                >Global sea levels</b-link
-              >
-              <hr variant="light" class="border-light" />
-
-              <b-link
-                class="my-2 text-decoration-none text-white d-block"
-                to="/globalsealevels"
-                >Global sea levels</b-link
-              >
             </div>
           </div>
         </div>

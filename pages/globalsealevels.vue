@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div >
     <NavBar></NavBar>
     <Title :title="'Sea Levels'" :author="'Alexander Doudkin'"></Title>
-    <div class="" id="p5Canvas"></div>
+    <div class="vh-100 vw-100" id="p5Canvas"></div>
   </div>
 </template>
 
@@ -16,10 +16,6 @@ export default {
         {
           city: 'Amsterdam',
           elevation: -2,
-        },
-        {
-          city: '',
-          elevation: 0,
         },
         {
           city: 'Santo Domingo',
@@ -189,18 +185,11 @@ export default {
           city: 'Ho Chi Minh City',
           elevation: 19,
         },
-        {
-          city: 'Wellington',
-          elevation: 20,
-        },
       ],
     }
   },
   async mounted() {
     const { default: P5 } = await import('p5')
-    let noiseScale = window.innerHeight / 2
-
-    var start = window.innerHeight / 2
     const sketch = (s) => {
       let yoff = 0.2 // 2nd dimension of perlin noise
 
@@ -209,35 +198,32 @@ export default {
       }
 
       s.draw = () => {
+        s.randomSeed(6)
         s.background(0)
+        // Loop through cities
         for (let i = 0; i < this.cities.length; i++) {
-          let y =
-            s.map(
-              this.cities[i].elevation,
-              0,
-              10,
-              500,
-              window.innerHeight - 500
-            ) -
-            i * 5
-          var weight = 10
-          s.fill(243)
+          let y = s.map(
+            this.cities[i].elevation,
+            0,
+            29,
+            s.height / 2 + 100,
+            s.height / 2 - 100
+          )
+          s.fill(200)
 
-          s.stroke(255)
-          s.strokeWeight(weight)
-          var x = s.width / 2 - i * 20
-          s.point(x, y)
           s.noStroke()
-          s.text(this.cities[i].city, x + weight, y)
+          var x = 100 + s.random(s.width - 300)
+          s.circle(x - 8, y - 4, 10)
+          s.text(this.cities[i].city, x, y)
         }
         s.noStroke()
 
         for (let i = 0; i <= 5; i++) {
-          s.fill(30, i * 30, 153, 127)
+          s.fill(30, i * 30, 153, 80)
           s.beginShape()
           let xoff = 0 + i * 2
 
-          for (let x = 0; x <= s.width; x += 20) {
+          for (let x = 0; x <= s.width + 30; x += 25) {
             let y = s.map(
               s.noise(xoff, yoff),
               0,
@@ -254,20 +240,13 @@ export default {
           s.vertex(0, s.height)
           s.endShape()
         }
-        yoff += 0.01
-
-        start += 0.005
+        yoff += 0.003
       }
     }
     // eslint-disable-next-line no-unused-vars
     const canvas = new P5(sketch, 'p5Canvas')
   },
-  methods: {
-    setup(sketch) {
-      sketch.background('green')
-      sketch.text('Hello p5!', 20, 20)
-    },
-  },
+
   render(h) {
     return h(VueP5, { on: this })
   },
