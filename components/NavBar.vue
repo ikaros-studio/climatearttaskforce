@@ -28,6 +28,18 @@
                 to="/globalsealevels"
                 ><b>Global sea levels</b> <small>Installation</small></b-link
               >
+              <hr />
+              <b-link
+                class="text-decoration-none text-white d-block"
+                to="/globalsealevels"
+                ><b>Project 2</b> <small>Installation</small></b-link
+              >
+              <hr />
+              <b-link
+                class="text-decoration-none text-white d-block"
+                to="/globalsealevels"
+                ><b>Project 3</b> <small>Installation</small></b-link
+              >
             </div>
           </div>
         </div>
