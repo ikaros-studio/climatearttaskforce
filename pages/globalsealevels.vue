@@ -200,22 +200,7 @@ export default {
       s.draw = () => {
         s.randomSeed(6)
         s.background(0)
-        // Loop through cities
-        for (let i = 0; i < this.cities.length; i++) {
-          let y = s.map(
-            this.cities[i].elevation,
-            0,
-            29,
-            s.height / 2 + 100,
-            s.height / 2 - 100
-          )
-          s.fill(200)
-
-          s.noStroke()
-          var x = 100 + s.random(s.width - 300)
-          s.circle(x - 8, y - 4, 10)
-          s.text(this.cities[i].city, x, y)
-        }
+      
         s.noStroke()
 
         for (let i = 0; i <= 5; i++) {
@@ -228,8 +213,8 @@ export default {
               s.noise(xoff, yoff),
               0,
               1,
-              s.height / 2 - 100,
-              s.height / 2 + 200
+              s.height / 2 - 140,
+              s.height / 2 + 120
             )
             //var y = s.noise(0.003)
             s.vertex(x, y)
@@ -240,7 +225,23 @@ export default {
           s.vertex(0, s.height)
           s.endShape()
         }
-        yoff += 0.003
+          // Loop through cities
+        for (let i = 0; i < this.cities.length; i++) {
+          let off= s.random(5)
+           let y = s.map(
+              s.noise(off, yoff),
+              0,
+              1,
+              s.height / 2 - 120,
+              s.height / 2 + 140
+            )
+          s.fill(255, 255, 255, 100)
+          s.noStroke()
+          let x = 100 + s.random(s.width - 300)
+          s.circle(x - 8, y - 4, 10)
+          s.text(this.cities[i].city, x, y)
+        }
+        yoff += 0.002
       }
     }
     // eslint-disable-next-line no-unused-vars

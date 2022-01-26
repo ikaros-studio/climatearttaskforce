@@ -10,43 +10,49 @@
             <img class="ml-3" height="100" width="" src="~/static/img/lgo.png"
           /></nuxt-link>
         </div>
-        <div
-          class="h-100"
-          @mouseover="showdrop = true"
-          @mouseleave="showdrop = false"
-        >
-          <h4 class="fw-300 my-4">
+        <h5 v-b-toggle.sidebar-right class="fw-300 my-4">
             <b-link class="text-decoration-none text-white">
               Discover artworks<b-icon class="ml-1" icon="chevron-down"></b-icon
             ></b-link>
             <br />
-          </h4>
-          <div class="d-flex" v-if="showdrop">
-            <div class="border rounded text-right p-3 ml-auto">
+          </h5>
+    <b-sidebar class="" text-variant="light" bg-variant="transparent" id="sidebar-right" title="" right >
+    <div class=" h-100">
+      <div class="px-3  py-2">
+        <div>
+         <b-link
+                class="text-decoration-none text-white d-block"
+                to="/globalsealevels"
+                >Global sea levels <small>Vizualization</small></b-link
+              >
+              <hr class="my-2" />
               <b-link
                 class="text-decoration-none text-white d-block"
                 to="/globalsealevels"
-                ><b>Global sea levels</b> <small>Installation</small></b-link
+                >Project 2 <small>Vizualization</small></b-link
               >
-              <hr />
+              <hr class="my-2 text-light" />
               <b-link
                 class="text-decoration-none text-white d-block"
                 to="/globalsealevels"
-                ><b>Project 2</b> <small>Installation</small></b-link
-              >
-              <hr />
-              <b-link
-                class="text-decoration-none text-white d-block"
-                to="/globalsealevels"
-                ><b>Project 3</b> <small>Installation</small></b-link
-              >
-            </div>
-          </div>
-        </div>
+                >Project 3 <small>Vizualization</small></b-link
+              ></div>
+
+               <div class="mt-5 mb-3 text-right">
+      <b-link class="d-block text-white font-weight-light small ">Contact  @</b-link>
+      <b-link class="d-block text-white font-weight-light small">
+        Read the whitepaper <b-icon class="" icon="file-text"></b-icon
+      ></b-link>
+    </div>
+      </div>
+      </div>
+    </b-sidebar>
+       
+
         <div></div>
-        <!-- <div class="bottom mr-3"><b-link class="mb-3">Contact</b-link></div> -->
       </div>
     </div>
+   
   </div>
 </template>
 <script>
