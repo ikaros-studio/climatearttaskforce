@@ -11,60 +11,125 @@
           /></nuxt-link>
         </div>
         <h5 v-b-toggle.sidebar-right class="fw-300 my-4">
-            <b-link class="text-decoration-none text-white">
-              Discover artworks<b-icon class="ml-1" icon="chevron-down"></b-icon
-            ></b-link>
-            <br />
-          </h5>
-    <b-sidebar class="" text-variant="light" bg-variant="transparent" id="sidebar-right" title="" right >
-    <div class=" h-100">
-      <div class="px-3  py-2">
-        <div>
-         <b-link
-                class="text-decoration-none text-white d-block"
-                to="/globalsealevels"
-                >Global sea levels <small>Vizualization</small></b-link
-              >
-              <hr class="my-2" />
-              <b-link
-                class="text-decoration-none text-white d-block"
-                to="/globalsealevels"
-                >Project 2 <small>Vizualization</small></b-link
-              >
-              <hr class="my-2 text-light" />
-              <b-link
-                class="text-decoration-none text-white d-block"
-                to="/globalsealevels"
-                >Project 3 <small>Vizualization</small></b-link
-              ></div>
+          <b-link class="text-decoration-none text-white">
+            Discover artworks<b-icon
+              class="ml-1"
+              icon="arrow-bar-right"
+            ></b-icon
+          ></b-link>
+          <br />
+        </h5>
+        <b-sidebar
+          backdrop
+          text-variant="light"
+          bg-variant="transparent"
+          id="sidebar-right"
+          title=""
+          right
+          sidebar-class="border-left border-lighter"
+        >
+          <div class=" h-100">
+            <div class="px-4  py-2">
+              <div>
+                <b-navbar-brand class="mr-0 d-block mb-3" href="#">
+                  <img width="50" src="~/static/img/lgo.png" alt="Visualize climate change" />
+                </b-navbar-brand>
+                <hr class="lighthr" />
 
-               <div class="mt-5 mb-3 text-right">
-      <b-link class="d-block text-white font-weight-light small ">Contact  @</b-link>
-      <b-link class="d-block text-white font-weight-light small">
-        Read the whitepaper <b-icon class="" icon="file-text"></b-icon
-      ></b-link>
-    </div>
-      </div>
-      </div>
-    </b-sidebar>
-       
+                <small class="text-muted font-weight-bold">VISUALIZE CLIMATE CHANGE</small>
 
+                <b-link
+                  :class="
+                    'fw-light text-uppercase text-decoration-none text-white d-block ' +
+                      randomBg()
+                  "
+                  to="/"
+                  >ABOUT</b-link
+                >
+                <hr class="lighthr" />
+                <small class="text-muted font-weight-bold">ARTWORKS</small>
+
+                <b-link
+                  v-for="(el, index) in artworks"
+                  :key="index"
+                  :class="
+                    'text-decoration-none fw-light text-uppercase text-white d-block ' +
+                      randomBg()
+                  "
+                  :to="el.link"
+                  >{{ el.title }}</b-link
+                >
+                <hr class="lighthr" />
+
+                <small class="text-muted font-weight-bold">MORE</small>
+                <b-link
+                  to=""
+                  :class="
+                    'd-block text-white fw-light text-decoration-none small ' +
+                      randomBg()
+                  "
+                  >CONTACT</b-link
+                >
+                <b-link
+                  to=""
+                  :class="
+                    'd-block text-white fw-light text-decoration-none small ' +
+                      randomBg()
+                  "
+                >
+                  WHITEPAPER</b-link
+                >
+                <b-link
+                  to=""
+                  :class="
+                    'd-block text-white fw-light text-decoration-none small ' +
+                      randomBg()
+                  "
+                >
+                  OPEN CALL</b-link
+                >
+              </div>
+            </div>
+          </div>
+        </b-sidebar>
         <div></div>
       </div>
     </div>
-   
   </div>
 </template>
 <script>
 export default {
-  setup() {},
-  data() {
+  setup () {},
+  data () {
     return {
       showdrop: false,
+      artworks: [
+        {
+          title: 'Global sea levels',
+          artist: 'Alexander Doudkin',
+          link: '/globalsealevels'
+        },
+        {
+          title: 'TBD',
+          artist: 'Alexander Doudkin',
+          link: '/globalsealevels'
+        },
+        {
+          title: 'TBD',
+          artist: 'Alexander Doudkin',
+          link: '/globalsealevels'
+        }
+      ]
     }
   },
+  methods: {
+    randomBg () {
+      const colors = ['warninglink', 'primarylink', 'dangerlink']
+
+      return colors[Math.floor(Math.random() * colors.length)]
+    }
+  }
 }
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

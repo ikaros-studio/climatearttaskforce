@@ -1,6 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;600&display=swap');
 
-$ligth: #296059 !default;
+$primary: #00ead3 !default;
+$danger: #ff449f !default;
+$warning: #ffeac1 !default;
+$info: #005f99 !default;
+
+.lighthr {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.infolink:hover {
+  color: $info !important;
+}
+
+.dangerlink:hover {
+  color: $danger !important;
+}
+
+.warninglink:hover {
+  color: $warning !important;
+}
+
+.primarylink:hover {
+  color: $primary !important;
+}
+
+.border-lighter {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.fw-light {
+  font-weight: 200 !important;
+}
 
 body {
   background-color: #000 !important;
@@ -25,10 +56,8 @@ body {
 
 .bg-transparent {
   backdrop-filter: blur(35px) !important;
-    background: #00000020, !important;
-
+  background: #00000020 !important;
 }
-
 
 .blue-fade {
   font-size: 40px;
