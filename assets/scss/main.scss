@@ -40,11 +40,22 @@ body {
 }
 
 .navbar {
-  position: absolute;
   right: 0;
 }
 .fw-300 {
   font-weight: 300 !important;
+}
+
+.introbar {
+  width: auto !important;
+  height: 100vh !important;
+  position: fixed !important;
+  right: 0 !important;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: sideways-right;
 }
 
 .transparent {
@@ -77,4 +88,22 @@ h1 {
   font-size: 3.5rem !important;
   font-weight: 600 !important;
   line-height: 0.8 !important;
+}
+
+.bg-anim {
+  background: linear-gradient(-45deg, $primary, $danger, $info);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

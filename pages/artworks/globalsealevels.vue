@@ -1,6 +1,5 @@
 <template>
   <div >
-    <NavBar></NavBar>
     <Title :title="'Sea Levels'" :author="'Alexander Doudkin'"></Title>
     <div class="vh-100 vw-100" id="p5Canvas"></div>
   </div>
