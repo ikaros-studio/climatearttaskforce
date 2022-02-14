@@ -1,13 +1,14 @@
 <template>
-  <div v-if="title" class="title border rounded-sm p-2 ml-4 mb-3 text-center">
-    <p class="mb-0">{{ title }}</p>
-    <small>{{ author }}</small>
-  </div>
+  <p class="text-uppercase ls-lg lh-1  title ml-3">
+    <b> {{ title }}</b
+    ><br />
+    <small class="  fw-light"> {{ author }}</small>
+  </p>
 </template>
 <script>
 export default {
   props: ['title', 'author'],
-  setup() {},
+  setup () {}
 }
 </script>
 <style>

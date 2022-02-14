@@ -1,20 +1,40 @@
 <template>
-  <div>
-    <div class="d-flex">
-      <div class="text-right ml-auto introbar">
-        <!-- <div class="d-flex align-items-center">
-          <nuxt-link class="text-decoration-none d-flex text-white" to="/">
-            <h1 class="ml-auto font-weight-bold">
-              visualize<br />climate change
-            </h1>
-            <img class="ml-3" height="100" width="" src="~/static/img/lgo.png"
-          /></nuxt-link>
-        </div> -->
+  <div
+    class="position-sticky border-bottom  d-flex align-items-center justify-content-end py-4 text-uppercase text-muted "
+  >
+    <b-link
+      v-if="!isMobile()"
+      to="/"
+      class="h5 mb-0 text-decoration-none text-muted mx-2 text-uppercase catfont mr-auto ml-3 "
+      >climate art taskforce</b-link
+    >
+    <b-link
+      v-else
+      to="/"
+      class="h5 mb-0 text-decoration-none text-muted mx-2 text-uppercase catfont mr-auto ml-3 "
+      >caf</b-link
+    >
+    <b-link class=" text-muted mx-2 small  fw-light">About</b-link
+    ><b-link class=" fw-light text-muted mx-2  small">Whitepaper</b-link>
+    <b-link class=" text-muted mx-2  fw-light small"> NFTs</b-link
+    ><b-link to="/" class=" text-muted ml-2 mr-3  fw-light small "
+      >Artworks</b-link
+    >
+    <!-- |
+      <b-link to="/" class="ml-2 mr-3  text-muted ">
+        <img
+          class=""
+          width="20"
+          src="~/static/img/lgo.png"
+          alt="Visualize climate change"
+        />
+      </b-link> -->
+    <!-- <div class="text-right ml-auto introbar">
         <div class="border-left border-lighter h-100 ">
           <div class="p-4">
             <b-link
               v-b-toggle.sidebar-right
-              class="text-decoration-none text-white "
+              class=" text-muted "
             >
               <img
                 class=""
@@ -30,9 +50,9 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <b-sidebar
+    <!-- <b-sidebar
         backdrop
         text-variant="light"
         bg-variant="transparent"
@@ -59,7 +79,7 @@
 
               <b-link
                 :class="
-                  'fw-light text-uppercase text-decoration-none text-white d-block ' +
+                  'fw-light text-uppercase  text-muted d-block ' +
                     randomBg()
                 "
                 to="/"
@@ -72,7 +92,7 @@
                 v-for="(el, index) in artworks"
                 :key="index"
                 :class="
-                  'text-decoration-none fw-light text-uppercase text-white d-block ' +
+                  ' fw-light text-uppercase text-muted d-block ' +
                     randomBg()
                 "
                 :to="el.link"
@@ -84,7 +104,7 @@
               <b-link
                 to=""
                 :class="
-                  'd-block text-white fw-light text-decoration-none small ' +
+                  'd-block text-muted fw-light  small ' +
                     randomBg()
                 "
                 >CONTACT</b-link
@@ -92,7 +112,7 @@
               <b-link
                 to=""
                 :class="
-                  'd-block text-white fw-light text-decoration-none small ' +
+                  'd-block text-muted fw-light  small ' +
                     randomBg()
                 "
               >
@@ -101,7 +121,7 @@
               <b-link
                 to=""
                 :class="
-                  'd-block text-white fw-light text-decoration-none small ' +
+                  'd-block text-muted fw-light  small ' +
                     randomBg()
                 "
               >
@@ -110,37 +130,31 @@
             </div>
           </div>
         </div>
-      </b-sidebar>
-      <div></div>
-    </div>
+      </b-sidebar> -->
   </div>
 </template>
 <script>
+import artworks from '../assets/js/artworks'
 export default {
   setup () {},
   data () {
     return {
       showdrop: false,
-      artworks: [
-        {
-          title: 'Global sea levels',
-          artist: 'Alexander Doudkin',
-          link: '/artworks/globalsealevels'
-        },
-        {
-          title: 'TBD',
-          artist: 'Alexander Doudkin',
-          link: '/globalsealevels'
-        },
-        {
-          title: 'TBD',
-          artist: 'Alexander Doudkin',
-          link: '/globalsealevels'
-        }
-      ]
+      artworks: artworks
     }
   },
+
   methods: {
+    isMobile () {
+      if (process.client) {
+        const width = window.innerWidth
+        if (width > 700) {
+          return false
+        } else {
+          return true
+        }
+      }
+    },
     randomBg () {
       const colors = ['warninglink', 'primarylink', 'dangerlink']
 
