@@ -1,6 +1,6 @@
 <template>
   <div
-    class="position-sticky border-bottom  d-flex align-items-center justify-content-end py-4 text-uppercase text-muted "
+    class="nav-gradient position-sticky border-bottom  d-flex align-items-center justify-content-end py-4 text-uppercase text-muted "
   >
     <b-link
       v-if="!isMobile()"
