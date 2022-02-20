@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'visualize climate change',
+    title: 'climate art taskforce',
     htmlAttrs: {
       lang: 'en',
     },

@@ -6,28 +6,36 @@ const artworks = [
     icon: 'M16 319.1C16 245.9 118.3 89.43 166.9 19.3C179.2 1.585 204.8 1.585 217.1 19.3C265.7 89.43 368 245.9 368 319.1C368 417.2 289.2 496 192 496C94.8 496 16 417.2 16 319.1zM112 319.1C112 311.2 104.8 303.1 96 303.1C87.16 303.1 80 311.2 80 319.1C80 381.9 130.1 432 192 432C200.8 432 208 424.8 208 416C208 407.2 200.8 400 192 400C147.8 400 112 364.2 112 319.1z',
     iconfill: '#00ead3',
     img: 'sea',
-    link: '/artworks/globalsealevels',
+    path: '/artworks/globalsealevels',
+    coverlink:
+      'https://media2.giphy.com/media/l4hLyOGRJWNSR8QQ8/giphy.gif?cid=ecf05e47r7ztk7lf7iavpelppn9wgsjf6fwsr2yh2whabg6s&rid=giphy.gif&ct=g',
   },
   {
     title: 'fish populations',
     artist: 'Alexander Doudkin',
-    link: '/artworks/globalsealevels',
+    coverlink:
+      'https://media0.giphy.com/media/10h8d7DM6tOTK/giphy.gif?cid=ecf05e47kdbk77ukw8sao1pkghyum3p2rq4923ht58bplbbf&rid=giphy.gif&ct=g',
     iconfill: '#00ead3',
     img: 'fishes',
+    soon: true,
 
     icon: 'M180.5 141.5C219.7 108.5 272.6 80 336 80C399.4 80 452.3 108.5 491.5 141.5C530.5 174.5 558.3 213.1 572.4 241.3C577.2 250.5 577.2 261.5 572.4 270.7C558.3 298 530.5 337.5 491.5 370.5C452.3 403.5 399.4 432 336 432C272.6 432 219.7 403.5 180.5 370.5C164.3 356.7 150 341.9 137.8 327.3L48.12 379.6C35.61 386.9 19.76 384.9 9.474 374.7C-.8133 364.5-2.97 348.7 4.216 336.1L50 256L4.216 175.9C-2.97 163.3-.8133 147.5 9.474 137.3C19.76 127.1 35.61 125.1 48.12 132.4L137.8 184.7C150 170.1 164.3 155.3 180.5 141.5L180.5 141.5zM416 224C398.3 224 384 238.3 384 256C384 273.7 398.3 288 416 288C433.7 288 448 273.7 448 256C448 238.3 433.7 224 416 224z',
   },
   {
     title: 'Air pollution',
     artist: 'Alexander Doudkin',
+    soon: true,
     img: 'airpollution',
-
-    link: '/artworks/globalsealevels',
+    coverlink:
+      'https://media1.giphy.com/media/cZb6tq2MFotjDzRTUu/giphy.gif?cid=ecf05e47is13gz1ttt2zn3x4odw3xju4tdzpk2g14mw0pzj1&rid=giphy.gif&ct=g',
   },
   {
     title: 'Species extinction',
     artist: 'Alexander Doudkin',
-    link: '/artworks/globalsealevels',
+    coverlink:
+      'https://media2.giphy.com/media/oNTQZNB67kMf5VHiCj/giphy.gif?cid=ecf05e47uhrqy2nvvd1zlwmrfnp4cxoggxb2kz5nxz9lrg8w&rid=giphy.gif&ct=g',
+    soon: true,
+
     img: 'biodiversity',
 
     iconfill: '#00ead3',
@@ -36,13 +44,17 @@ const artworks = [
   {
     title: 'Emissions',
     artist: 'Alexander Doudkin',
-    link: '/artworks/globalsealevels',
+    coverlink:
+      'https://media1.giphy.com/media/10rMBuwIVwIy40/giphy.gif?cid=ecf05e47n8qlg20quy2lma8denznhdwqxfwkaegv8k98oyuc&rid=giphy.gif&ct=g',
     img: 'emissions',
+    soon: true,
   },
   {
     title: 'Wild fires',
     artist: 'Alexander Doudkin',
-    link: '/artworks/globalsealevels',
+    coverlink:
+      'https://media0.giphy.com/media/q84mckYneoF8I/giphy.gif?cid=ecf05e47sbb2l9a0yypr02cdhpynnsxyx6atlnmg2edjul7r&rid=giphy.gif&ct=g',
+    soon: true,
     img: 'wildfire',
     iconfill: '#00ead3',
     icon: 'M323.5 51.25C302.8 70.5 284 90.75 267.4 111.1C240.1 73.62 206.2 35.5 168 0C69.75 91.12 0 210 0 281.6C0 408.9 100.2 512 224 512s224-103.1 224-230.4C448 228.4 396 118.5 323.5 51.25zM304.1 391.9C282.4 407 255.8 416 226.9 416c-72.13 0-130.9-47.73-130.9-125.2c0-38.63 24.24-72.64 72.74-130.8c7 8 98.88 125.4 98.88 125.4l58.63-66.88c4.125 6.75 7.867 13.52 11.24 19.9C364.9 290.6 353.4 357.4 304.1 391.9z',
@@ -50,8 +62,10 @@ const artworks = [
   {
     title: 'Global warming',
     artist: 'Alexander Doudkin',
-    link: '/artworks/globalsealevels',
+    coverlink:
+      'https://media1.giphy.com/media/xULW8s6Z5CGIHcZKZa/giphy.gif?cid=ecf05e47vgubovh792yljxaue1sc1vcj1oxqk5lapsimonsl&rid=giphy.gif&ct=g',
     img: 'sea',
+    soon: true,
   },
 ]
 

@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <Title :title="'Sea Levels'" :author="'Alexander Doudkin'"></Title>
-    <div class="vh-100 vw-100" id="p5Canvas"></div>
+  <div class="w-100  overflow-hidden">
+    <Title :title="'sea levels'" :author="'Alexander Doudkin'"></Title>
+    <div class="vh-100 " id="p5Canvas"></div>
   </div>
 </template>
 
@@ -25,7 +25,7 @@ export default {
           elevation: 0
         },
         {
-          city: 'Alger /Algiers',
+          city: 'Algiers',
           elevation: 0
         },
         {
@@ -65,7 +65,7 @@ export default {
           elevation: 1
         },
         {
-          city: 'Nassau (on New Providence)',
+          city: 'Nassau',
           elevation: 2
         },
         {
@@ -197,11 +197,11 @@ export default {
       }
 
       s.draw = () => {
-        s.randomSeed(5)
+        s.randomSeed(25)
         s.background(255)
         s.noStroke()
         for (let i = 0; i <= 5; i++) {
-          s.fill(12, 60, 120, 100)
+          s.fill(s.random(200), s.random(200), s.random(200), 100)
           s.beginShape()
           let xoff = 0 + i * 2
 
@@ -234,7 +234,7 @@ export default {
           )
           s.fill(255, 255, 255, 100)
           s.noStroke()
-          let x = 100 + s.random(s.width - 300)
+          let x = 50 + s.random(s.width - 200)
           s.circle(x - 8, y - 4, 10)
           s.text(this.cities[i].city, x, y)
         }
