@@ -2,10 +2,10 @@
   <div class="vh-100">
     <div class="d-flex w-100 overflow-auto">
       <div
-        class="h-100 bg-white p-2 border border-right small text-dark  text-uppercase vertical-title ls-lg lh-1"
+        class="h-100 bg-white text-center p-2 border border-right small text-dark  text-uppercase vertical-title ls-lg lh-1"
       >
         <b-link class="m-0 text-decoration-none">
-          <i>open call open call open call open call open call open call open call open call open call </i>
+          <i>open call for artists</i>
         </b-link>
       </div>
       <h1 class="d-flex my-auto px-2 mx-auto align-items-start ">
