@@ -1,14 +1,17 @@
 const artworks = [
   {
-    id: '',
     title: 'Global sea levels',
     artist: 'Alexander Doudkin',
-    icon: 'M16 319.1C16 245.9 118.3 89.43 166.9 19.3C179.2 1.585 204.8 1.585 217.1 19.3C265.7 89.43 368 245.9 368 319.1C368 417.2 289.2 496 192 496C94.8 496 16 417.2 16 319.1zM112 319.1C112 311.2 104.8 303.1 96 303.1C87.16 303.1 80 311.2 80 319.1C80 381.9 130.1 432 192 432C200.8 432 208 424.8 208 416C208 407.2 200.8 400 192 400C147.8 400 112 364.2 112 319.1z',
-    iconfill: '#00ead3',
-    img: 'sea',
     path: '/artworks/globalsealevels',
     coverlink:
       'https://media2.giphy.com/media/l4hLyOGRJWNSR8QQ8/giphy.gif?cid=ecf05e47r7ztk7lf7iavpelppn9wgsjf6fwsr2yh2whabg6s&rid=giphy.gif&ct=g',
+  },
+  {
+    title: 'Global warming',
+    artist: 'Bhuvesh Gautam',
+    coverlink:
+      'https://media1.giphy.com/media/xULW8s6Z5CGIHcZKZa/giphy.gif?cid=ecf05e47vgubovh792yljxaue1sc1vcj1oxqk5lapsimonsl&rid=giphy.gif&ct=g',
+    path: '/artworks/temperature',
   },
   {
     title: 'fish populations',
@@ -58,14 +61,6 @@ const artworks = [
     img: 'wildfire',
     iconfill: '#00ead3',
     icon: 'M323.5 51.25C302.8 70.5 284 90.75 267.4 111.1C240.1 73.62 206.2 35.5 168 0C69.75 91.12 0 210 0 281.6C0 408.9 100.2 512 224 512s224-103.1 224-230.4C448 228.4 396 118.5 323.5 51.25zM304.1 391.9C282.4 407 255.8 416 226.9 416c-72.13 0-130.9-47.73-130.9-125.2c0-38.63 24.24-72.64 72.74-130.8c7 8 98.88 125.4 98.88 125.4l58.63-66.88c4.125 6.75 7.867 13.52 11.24 19.9C364.9 290.6 353.4 357.4 304.1 391.9z',
-  },
-  {
-    title: 'Global warming',
-    artist: 'Alexander Doudkin',
-    coverlink:
-      'https://media1.giphy.com/media/xULW8s6Z5CGIHcZKZa/giphy.gif?cid=ecf05e47vgubovh792yljxaue1sc1vcj1oxqk5lapsimonsl&rid=giphy.gif&ct=g',
-    img: 'sea',
-    soon: true,
   },
 ]
 

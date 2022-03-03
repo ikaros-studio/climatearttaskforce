@@ -1,8 +1,14 @@
 <template>
   <div class="vh-100">
     <div class="d-flex w-100 overflow-auto">
-      <Title class=""></Title>
-      <h1 class="d-flex my-auto mx-auto align-items-start ">
+      <div
+        class="h-100 bg-white p-2 border border-right small text-dark  text-uppercase vertical-title ls-lg lh-1"
+      >
+        <b-link class="m-0 text-decoration-none">
+          <i>open call open call open call open call open call open call open call open call open call </i>
+        </b-link>
+      </div>
+      <h1 class="d-flex my-auto px-2 mx-auto align-items-start ">
         <b-link
           v-for="(artwork, index) in artworks"
           :key="index"
@@ -25,12 +31,6 @@
           ></b-link
         >
       </h1>
-      <b-button
-        size="sm "
-        class="font-size-bold"
-        variant="outline-dark position-absolute bottom-right mr-3 mb-3 position-fixed"
-        >OPEN CALL</b-button
-      >
     </div>
   </div>
 </template>

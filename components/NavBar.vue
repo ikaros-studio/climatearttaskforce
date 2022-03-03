@@ -1,28 +1,30 @@
 <template>
   <div
-    class="nav-gradient position-sticky border-bottom  d-flex align-items-center justify-content-end py-4 text-uppercase text-muted "
+    class="bg-white position-relative z-100 border-bottom  d-flex align-items-center justify-content-end py-4 text-uppercase text-muted "
   >
     <b-link
       v-if="!isMobile()"
       to="/"
-      class="h5 mb-0 text-decoration-none text-muted mx-2 text-uppercase catfont mr-auto ml-3 "
-      >climate art taskforce</b-link
+      class="d-flex align-items-center h5 mb-0 text-decoration-none text-muted mx-2 text-uppercase catfont mr-auto ml-3 "
+    >
+      <b-img height="14" class="mr-1" src="~/static/img/logo.png"></b-img>
+      climate art taskforce</b-link
     >
     <b-link
       v-else
       to="/"
-      class="h5 mb-0 text-decoration-none text-muted mx-2 text-uppercase catfont mr-auto ml-3 "
+      class="h5 mb-0 text-decoration-none d-flex align-items-center text-muted mx-2 text-uppercase catfont mr-auto ml-3 "
+    >
+      <b-img height="14" class="mr-1" src="~/static/img/logo.png"></b-img
       >caf</b-link
     >
-    <b-link to="/" class=" text-muted mx-2  fw-light small "
-      >Artworks</b-link
-    >
+    <b-link to="/" class=" text-muted mx-2  fw-light small ">Artworks</b-link>
     <b-link href="" class=" text-muted mx-2 small  fw-light">About</b-link
     ><b-link href="" class=" fw-light text-muted mx-2  small"
       >Whitepaper</b-link
     >
-    <b-link class="d-flex align-items-center text-muted mx-2  fw-light small">
-      NFTs<b-badge class="ml-1 small">soon</b-badge></b-link
+    <b-link class="d-flex align-items-center text-muted ml-2 mr-3  fw-light small">
+      NFTs</b-link
     >
     <!-- |
       <b-link to="/" class="ml-2 mr-3  text-muted ">

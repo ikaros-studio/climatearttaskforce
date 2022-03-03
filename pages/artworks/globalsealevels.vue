@@ -1,6 +1,6 @@
 <template>
-  <div class="w-100  overflow-hidden">
-    <Title :title="'sea levels'" :author="'Alexander Doudkin'"></Title>
+  <div class="w-100 d-flex  overflow-hidden">
+    <Title></Title>
     <div class="vh-100 " id="p5Canvas"></div>
   </div>
 </template>
