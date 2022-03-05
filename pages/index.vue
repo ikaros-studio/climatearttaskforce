@@ -15,7 +15,7 @@
           :disabled="artwork.soon"
           :to="artwork.path"
           :class="
-            'main-menu-item text-center text-uppercase font-weight-bold text-decoration-none p-0 mr-2 w-100'
+            'text-dark main-menu-item text-center text-uppercase font-weight-bold text-decoration-none p-0 mr-2 w-100'
           "
         >
           <img
