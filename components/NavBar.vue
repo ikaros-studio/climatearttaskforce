@@ -19,9 +19,9 @@
       >caf</b-link
     >
     <b-link to="/" class=" text-muted mx-2  fw-light small ">Artworks</b-link>
-    <b-link href="" class=" text-muted mx-2 small  fw-light">About</b-link
+    <b-link to="/about" class=" text-muted mx-2 small  fw-light">About</b-link
     ><b-link href="" class=" fw-light text-muted ml-2 mr-3  small"
-      >Publications</b-link
+      >Publications <b-badge  class="small bg-anim">soon</b-badge></b-link
     >
     <!-- <b-link class="d-flex align-items-center text-muted ml-2 mr-3  fw-light small">
       NFTs</b-link

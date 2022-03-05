@@ -9,6 +9,7 @@ const artworks = [
   {
     title: 'Global warming',
     artist: 'Bhuvesh Gautam',
+    soon: true,
     coverlink:
       'https://media1.giphy.com/media/xULW8s6Z5CGIHcZKZa/giphy.gif?cid=ecf05e47vgubovh792yljxaue1sc1vcj1oxqk5lapsimonsl&rid=giphy.gif&ct=g',
     path: '/artworks/temperature',
