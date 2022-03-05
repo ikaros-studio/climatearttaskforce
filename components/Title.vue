@@ -4,7 +4,7 @@
     variant="dark"
     :title="artwork.description"
     v-if="artwork"
-    class="h-100 bg-white text-center px-2 border border-right small text-dark  text-uppercase vertical-title ls-lg lh-1"
+    class="h-100 bg-white text-center z-50 px-2 border border-right small text-dark  text-uppercase vertical-title ls-lg lh-1"
   >
     <p class="m-0">
       <i>

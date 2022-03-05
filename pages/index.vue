@@ -8,7 +8,7 @@
           <i>open call for artists</i>
         </b-link>
       </div>
-      <h1 class="d-flex my-auto px-2 mx-auto align-items-start ">
+      <h1 class="d-flex my-auto px-5 mx-auto align-items-start ">
         <b-link
           v-for="(artwork, index) in artworks"
           :key="index"
@@ -20,7 +20,7 @@
         >
           <img
             :src="artwork.coverlink"
-            class="menu-circle border mb-2 mt-4 p-0 d-block border border-dark "
+            class="menu-circle border mb-2 mt-5 p-0 d-block border border-dark "
           />
 
           <span :class="'vertical-text ' + randomBg()"

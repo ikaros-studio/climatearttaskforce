@@ -18,6 +18,11 @@ a {
 .z-100 {
   z-index: 100 !important;
 }
+
+.z-50 {
+  z-index: 50 !important;
+}
+
 .bg-white {
   background-color: white !important;
 }
@@ -148,6 +153,7 @@ body {
 .vertical-title {
   position: fixed !important;
   bottom: 0;
+  left: 0;
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
   /* Legacy vendor prefixes that you probably don't need... */
