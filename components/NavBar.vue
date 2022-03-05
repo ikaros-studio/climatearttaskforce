@@ -16,7 +16,7 @@
       class="h5 mb-0 text-decoration-none d-flex align-items-center text-muted mx-2 text-uppercase catfont mr-auto ml-3 "
     >
       <b-img height="14" class="mr-1" src="~/static/img/logo.png"></b-img
-      >caf</b-link
+      >CAT</b-link
     >
     <b-link to="/" class=" text-muted mx-2  fw-light small ">Artworks</b-link>
     <b-link to="/about" class=" text-muted mx-2 small  fw-light">About</b-link

@@ -5,14 +5,14 @@
         <b-img height="100" class="mr-1" src="~/static/img/logo.png"></b-img>
       </div>
       <h5 class="text-dark font-weight-light    ">
-        The climate art taskforce (CAF) is a global alliance of
+        The climate art taskforce (CAT) is a global alliance of
         interdisciplinary digital artists against climate change. Based on an
-        open source platform, CAF curates and publishes digital artworks &
+        open source platform, CAT curates and publishes digital artworks &
         publications making climate change accessible and approachable for a
-        non-expert audience. CAF invites digital practitioners to contribute
+        non-expert audience. CAT invites digital practitioners to contribute
         with their own relating digital works.
         <br />
-        With it’s open source approach, CAF aims to be inclusive towards all
+        With it’s open source approach, CAT aims to be inclusive towards all
         kinds of artists and art formats relating to climate change, everyone is
         welcome to contribute. Selected artworks and the platform itself are constantly curated for external
         projects and campaigns.
