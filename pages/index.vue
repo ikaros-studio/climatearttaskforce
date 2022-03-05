@@ -4,7 +4,7 @@
       <div
         class="h-100 bg-white text-center p-2 border border-right small text-dark  text-uppercase vertical-title ls-lg lh-1"
       >
-        <b-link class="m-0 text-decoration-none">
+        <b-link href="https://www.artconnect.com/opportunity/ul_Y02MlSssJrrvE6q0vq" target="_blank" class="m-0 text-decoration-none">
           <i>open call for artists</i>
         </b-link>
       </div>

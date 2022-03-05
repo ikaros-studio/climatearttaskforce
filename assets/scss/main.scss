@@ -6,7 +6,11 @@ $warning: #ffeac1 !default;
 $info: #005f99 !default;
 
 a {
-  color: #000000d0 !important;
+  color: $danger !important;
+}
+
+.footlink {
+  color: black !important;
 }
 
 .bg-camo {
