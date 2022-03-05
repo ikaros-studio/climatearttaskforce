@@ -9,13 +9,13 @@
         interdisciplinary digital artists against climate change. Based on an
         open source platform, CAF curates and publishes digital artworks &
         publications making climate change accessible and approachable for a
-        non-expert audience. CAF invites digital practitioners of all kinds to
-        contribute with their own relating digital works.
+        non-expert audience. CAF invites digital practitioners to contribute
+        with their own relating digital works.
         <br />
         With it’s open source approach, CAF aims to be inclusive towards all
-        kinds of art formats relating to climate change, everyone is welcome to
-        contribute. The artworks are constantly curated for external projects
-        and campaigns.
+        kinds of artists and art formats relating to climate change, everyone is
+        welcome to contribute. Selected artworks and the platform itself are constantly curated for external
+        projects and campaigns.
         <br />
         <br />
 

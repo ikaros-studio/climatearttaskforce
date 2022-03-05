@@ -3,7 +3,7 @@
     class="d-flex align-items-center justify-content-between z-100 position-relative bg-white px-3 text-dark small border-top text-uppercase py-2"
   >
     <p class="mb-0 small">
-      The climate art taskforce is a project initated by
+      The climate art taskforce is a project initiated by
       <b-link class="footlink" href="https://ikaros.studio/" target="_blank"
         >ikaros studio berlin</b-link
       >
