@@ -1,6 +1,6 @@
 <template>
-  <div class="vh-100">
-    <div class="d-flex w-100 overflow-auto">
+  <div class="">
+    <div class="d-flex  min-vh-100 w-100 overflow-auto">
       <div
         class="h-100 bg-white text-center p-2 border border-right small text-dark  text-uppercase vertical-title ls-lg lh-1"
       >
@@ -8,7 +8,7 @@
           <i>open call for artists</i>
         </b-link>
       </div>
-      <h1 class="d-flex my-auto px-5 mx-auto align-items-start ">
+      <h1 class="d-flex  my-2 pl-5 mx-auto align-items-start ">
         <b-link
           v-for="(artwork, index) in artworks"
           :key="index"
