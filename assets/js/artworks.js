@@ -1,15 +1,16 @@
 const artworks = [
   {
-    title: 'Global sea levels',
+    title: 'Sea levels',
     artist: 'Alexander Doudkin',
     path: '/artworks/globalsealevels',
+    country: "DE",
     coverlink:
       'https://media2.giphy.com/media/l4hLyOGRJWNSR8QQ8/giphy.gif?cid=ecf05e47r7ztk7lf7iavpelppn9wgsjf6fwsr2yh2whabg6s&rid=giphy.gif&ct=g',
   },
   {
     title: 'Global warming',
     artist: 'Bhuvesh Gautam',
-    soon: true,
+    country: "IN",
     coverlink:
       'https://media1.giphy.com/media/xULW8s6Z5CGIHcZKZa/giphy.gif?cid=ecf05e47vgubovh792yljxaue1sc1vcj1oxqk5lapsimonsl&rid=giphy.gif&ct=g',
     path: '/artworks/temperature',

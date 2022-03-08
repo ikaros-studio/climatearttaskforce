@@ -8,7 +8,7 @@
   >
     <p class="m-0">
     
-        <b> {{ artwork.title }}</b> | {{ artwork.artist }}
+        <b> {{ artwork.title }}</b> | {{ artwork.artist }}, {{ artwork.country }}
     </p>
 
     <!-- <b-link class="small" v-b-toggle="'collapse-2'">About</b-link>

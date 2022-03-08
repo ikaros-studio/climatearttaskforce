@@ -1,5 +1,5 @@
 <template>
-  <b-row class="min-vh-100 " align-v="center" align-h="center">
+  <b-row class="min-vh-100 w-100 " align-v="center" align-h="center">
     <b-col md="7" class="">
       <div class="w-100 text-center mb-5">
         <b-img height="100" class="mr-1" src="~/static/img/logo.png"></b-img>

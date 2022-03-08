@@ -9,7 +9,7 @@
       >
     </p>
     <div>
-      <b-link href="https://ikaros.studio/imprint" target="blank" class="small mr-2 footlink"
+      <b-link href="https://ikaros.studio/imprint" target="_blank" class="small mr-2 footlink"
         >Imprint</b-link
       >
       <b-link href="mailto:contact@ikaros.studio" class="small  footlink">Contact</b-link>
