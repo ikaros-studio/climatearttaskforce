@@ -2,23 +2,29 @@
   <b-row class="min-vh-100 w-100 px-3" align-v="center" align-h="center">
     <b-col md="7" class="">
       <div class="w-100 text-left mb-4">
-        <b-img height="100" class="mr-1" src="~/static/img/logo.png"></b-img>
+      
+        <h2 class="catfont text-uppercase text-dark">climate art taskforce</h2>
       </div>
       <h5 class="text-dark font-weight-light    ">
         The climate art taskforce (<i>CAT</i>) is a global alliance of
         interdisciplinary digital artists against climate change. Based on an
-        open source platform, <i>CAT</i> curates and publishes digital artworks &
-        publi<i>CAT</i>ions making climate change accessible and approachable for a
-        non-expert audience. <i>CAT</i> invites digital practitioners to contribute
-        with their own relating digital works.
-        <br />
-        With it’s open source approach, <i>CAT</i> aims to be inclusive towards all
-        kinds of artists and art formats relating to climate change, everyone is
-        welcome to contribute. Selected artworks and the platform itself are constantly curated for external
-        projects and campaigns.
-        <br />
-        <br />
+        open source platform, <i>CAT</i> curates and publishes digital artworks
+        & publications making climate change accessible and approachable for a
+        non-expert audience. <i>CAT</i> invites digital practitioners to
+        contribute with their own relating digital works. <br /><br />
+        Participating countries are
+        <span v-for="(el, index) in artworks" :key="index"
+          >{{ el.country }} 
+          <span v-if="index != artworks.length - 1">, </span></span
+        >
 
+        <br /><br />
+        With it’s open source approach, <i>CAT</i> aims to be inclusive towards
+        all kinds of artists and art formats relating to climate change,
+        everyone is welcome to contribute. Selected artworks and the platform
+        itself are constantly curated for external projects and campaigns.
+        <br />
+        <br />
         The source code is available through
         <b-link
           href="https://github.com/ikarosstudios/climatearttaskforce"
@@ -44,3 +50,14 @@
     >
   </b-row>
 </template>
+
+<script>
+import artworks from '../assets/js/artworks'
+export default {
+  data () {
+    return {
+      artworks: artworks
+    }
+  }
+}
+</script>

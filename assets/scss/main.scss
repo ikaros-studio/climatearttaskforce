@@ -4,6 +4,9 @@ $primary: #00ead3 !default;
 $danger: #ff449f !default;
 $warning: #ffeac1 !default;
 $info: #005f99 !default;
+$component-active-bg: #ff449f !default;
+// ...
+$custom-checkbox-indicator-indeterminate-bg: #ff449f !default;
 
 a {
   color: $danger !important;
@@ -60,6 +63,10 @@ a {
   height: 55px !important;
   border-radius: 100% !important
   ;
+}
+
+.rounded-100 {
+  border-radius: 100% !important;
 }
 
 .title-circle {
@@ -172,7 +179,6 @@ body {
   backdrop-filter: blur(5px) !important;
   // box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
 }
-
 
 .bg-transparent {
   backdrop-filter: blur(35px) !important;

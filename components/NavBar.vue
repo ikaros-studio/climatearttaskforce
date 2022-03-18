@@ -7,7 +7,6 @@
       to="/"
       class="d-flex align-items-center h5 mb-0 text-decoration-none text-muted mx-2 text-uppercase catfont mr-auto ml-3 "
     >
-      <b-img height="14" class="mr-1" src="~/static/img/logo.png"></b-img>
       climate art taskforce</b-link
     >
     <b-link
@@ -15,20 +14,24 @@
       to="/"
       class="h5 mb-0 text-decoration-none d-flex align-items-center text-muted mx-2 text-uppercase catfont mr-auto ml-3 "
     >
-      <b-img height="14" class="mr-1" src="~/static/img/logo.png"></b-img
-      >CAT</b-link
+      CAT</b-link
     >
     <b-link to="/" class=" text-muted mx-2  fw-light small ">Artworks</b-link>
     <b-link to="/about" class=" text-muted mx-2 small  fw-light">About</b-link
-    ><b-link href="" class=" fw-light text-muted ml-2 mr-3  small"
-      >Publications <b-badge class="small bg-anim">soon</b-badge></b-link
+    ><b-link
+      href=""
+      class=" fw-light text-muted ml-2 mr-3 d-flex align-items-center small"
+      >Publications
+      <b-badge class="small bg-anim rounded-sm ml-1">soon</b-badge></b-link
     >
   </div>
 </template>
 <script>
 import artworks from '../assets/js/artworks'
+import Logo from './Logo.vue'
 export default {
   setup () {},
+
   data () {
     return {
       showdrop: false,
