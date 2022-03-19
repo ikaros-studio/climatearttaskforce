@@ -4,22 +4,17 @@
     <div class="d-flex h-100">
       <div class="w-100 my-auto text-center ">
         <svg
-          class="w-100"
-          version="1.0"
+          class="mx-5"
+          :style="'border:1px solid ' + getColor(input) + '; max-width: 600;'"
           xmlns="http://www.w3.org/2000/svg"
-          width="468pt"
-          height="239pt"
-          viewBox="0 0 468 239"
-          preserveAspectRatio="xMidYMid meet"
+          viewBox="35 0 390 210"
         >
           <defs>
             <filter id="distort">
               <feTurbulence
                 type="fractalNoise"
-                baseFrequency="0.00015"
-                numOctaves="2"
-                result="turbulence_3"
-                data-filterId="3"
+                baseFrequency="0.00020"
+                numOctaves="4"
               />
               <feDisplacementMap
                 in="SourceGraphic"
@@ -206,8 +201,14 @@
             />
           </g>
         </svg>
-        <p class="text-dark small d-block">
-          {{ input }}, {{ tempdata[input] }}° {{ timer }}
+        <p class="text-dark small mt-3 d-block">
+          {{ input }}, {{ tempdata[input] }}° {{ timer }} <br />
+          <b-link
+            v-if="repeat"
+            @click="input = getMinValue(tempdata), repeat = false"
+            class="small"
+            >play again</b-link
+          >
         </p>
       </div>
     </div>
@@ -221,6 +222,7 @@ export default {
     return {
       timer: null,
       input: 1938,
+      repeat: false,
       color: '#0014CC',
       tempdata: {
         // 1880: -0.08,
@@ -372,9 +374,10 @@ export default {
       if (this.input < this.getMaxValue(this.tempdata)) {
         this.input++
       } else {
-        this.input = this.getMinValue(this.tempdata)
+        this.repeat = true
+        // this.input = this.getMinValue(this.tempdata)
       }
-    }, 100)
+    }, 50)
   },
   methods: {
     getDistortion (input) {
