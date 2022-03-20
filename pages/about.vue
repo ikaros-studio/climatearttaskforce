@@ -1,5 +1,11 @@
 <template>
-  <b-row class="min-vh-100 w-100 px-3" align-v="center" align-h="center">
+  <b-row
+    class="bg-continent min-vh-100 w-100 px-3"
+    align-v="center"
+    align-h="center"
+  >
+    <!-- Using components -->
+
     <b-col md="7" class="">
       <div class="w-100 text-left mb-4">
         <h2 class="catfont text-uppercase text-dark">climate art taskforce</h2>

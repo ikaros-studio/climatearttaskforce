@@ -4,33 +4,39 @@
       <div
         class="h-100 bg-white text-center p-2 border border-right small text-dark  text-uppercase vertical-title ls-lg lh-1"
       >
-        <b-link href="https://www.artconnect.com/opportunity/ul_Y02MlSssJrrvE6q0vq" target="_blank" class="m-0 text-decoration-none">
+        <b-link
+          href="https://www.artconnect.com/opportunity/ul_Y02MlSssJrrvE6q0vq"
+          target="_blank"
+          class="m-0 text-decoration-none"
+        >
           <i>open call for artists</i>
         </b-link>
       </div>
-      <h1 class="d-flex  my-2 pl-5 mx-auto align-items-start ">
-        <b-link
-          v-for="(artwork, index) in artworks"
-          :key="index"
-          :disabled="artwork.soon"
-          :to="artwork.path"
-          :class="
-            'text-dark main-menu-item text-center text-uppercase font-weight-bold text-decoration-none p-0 mr-2 w-100'
-          "
-        >
-          <img
-            :src="artwork.coverlink"
-            class="menu-circle border mb-2 mt-5 p-0 d-block border border-dark "
-          />
+      <div class="mx-auto ml-5">
+        <h1 class="d-flex my-2 align-items-start ">
+          <b-link
+            v-for="(artwork, index) in artworks"
+            :key="index"
+            :disabled="artwork.soon"
+            :to="artwork.path"
+            :class="
+              'text-dark main-menu-item text-center text-uppercase font-weight-bold text-decoration-none p-0 mr-2 w-100'
+            "
+          >
+            <img
+              :src="artwork.coverlink"
+              class="menu-circle border mb-2 mt-5 p-0 d-block border border-dark "
+            />
 
-          <span :class="'vertical-text ' + randomBg()"
-            >{{ artwork.title
-            }}<small class="small font-italic" v-if="artwork.soon"
-              >(soon)</small
-            ></span
-          ></b-link
-        >
-      </h1>
+            <span :class="'vertical-text ' + randomBg()"
+              >{{ artwork.title
+              }}<small class="small font-italic" v-if="artwork.soon"
+                >(soon)</small
+              ></span
+            ></b-link
+          >
+        </h1>
+      </div>
     </div>
   </div>
 </template>
@@ -43,28 +49,7 @@ export default {
   data () {
     return {
       artworks: artworks,
-      quotes: [
-        {
-          content:
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam',
-          author: 'Alexander Doou'
-        },
-        {
-          content:
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam',
-          author: 'Alexander Doou'
-        },
-        {
-          content:
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam',
-          author: 'Alexander Doou'
-        },
-        {
-          content:
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam',
-          author: 'Alexander Doou'
-        }
-      ]
+      filter: null
     }
   },
   methods: {
