@@ -34,12 +34,11 @@ const artworks = [
   },
   {
     title: 'Blah Blah Blah',
-    artist: 'The yenner',
+    artist: 'The Yenner',
     country: 'GB',
-    soon: true,
     coverlink:
       'https://media3.giphy.com/media/iW8tsoJWcfPc4/giphy.gif?cid=ecf05e47cvmx8qlq335tfj1272sulbo4anfp4bcjhnoxb7w9&rid=giphy.gif&ct=g',
-    path: '/artworks/themeltingworld',
+    path: '/artworks/blahblahblah',
   },
 ]
 
