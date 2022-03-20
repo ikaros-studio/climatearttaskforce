@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="bg-continent">
     <div class="d-flex  min-vh-100 w-100 overflow-auto">
       <div
         class="h-100 bg-white text-center p-2 border border-right small text-dark  text-uppercase vertical-title ls-lg lh-1"

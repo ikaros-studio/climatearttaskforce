@@ -16,6 +16,12 @@ a {
   color: black !important;
 }
 
+.bg-continent {
+  background-image: url('~/static/img/bg-continents.svg');
+  background-position: center;
+  //background-repeat: no-repeat; /* Do not repeat the image */
+}
+
 .bg-camo {
   background-image: url('~/static/img/bg.jpg');
   background-size: cover;

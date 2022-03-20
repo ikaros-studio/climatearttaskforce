@@ -205,7 +205,7 @@
           {{ input }}, {{ tempdata[input] }}° {{ timer }} <br />
           <b-link
             v-if="repeat"
-            @click="input = getMinValue(tempdata), repeat = false"
+            @click=";(input = getMinValue(tempdata)), (repeat = false)"
             class="small"
             >play again</b-link
           >
@@ -377,7 +377,7 @@ export default {
         this.repeat = true
         // this.input = this.getMinValue(this.tempdata)
       }
-    }, 50)
+    }, 500)
   },
   methods: {
     getDistortion (input) {

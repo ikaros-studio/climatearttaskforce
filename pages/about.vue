@@ -2,7 +2,6 @@
   <b-row class="min-vh-100 w-100 px-3" align-v="center" align-h="center">
     <b-col md="7" class="">
       <div class="w-100 text-left mb-4">
-      
         <h2 class="catfont text-uppercase text-dark">climate art taskforce</h2>
       </div>
       <h5 class="text-dark font-weight-light    ">
@@ -11,12 +10,7 @@
         open source platform, <i>CAT</i> curates and publishes digital artworks
         & publications making climate change accessible and approachable for a
         non-expert audience. <i>CAT</i> invites digital practitioners to
-        contribute with their own relating digital works. <br /><br />
-        Participating countries are
-        <span v-for="(el, index) in artworks" :key="index"
-          >{{ el.country }} 
-          <span v-if="index != artworks.length - 1">, </span></span
-        >
+        contribute with their own relating digital works.
 
         <br /><br />
         With it’s open source approach, <i>CAT</i> aims to be inclusive towards
