@@ -50,17 +50,10 @@
     >
       <template #modal-header="{ close }">
         <p
-          class="
-            mb-0
-            d-flex
-            align-items-center
-            small
-            text-white text-uppercase
-            ls-lg
-          "
+          class="mb-0 d-flex align-items-center text-white text-uppercase ls-lg"
         >
           <b>{{ artwork.title }}</b
-          >, {{ artwork.artist }},
+          >, <span class="mr-1">{{ artwork.artist }} </span>
           <country-flag
             class="rounded"
             :country="artwork.country"
