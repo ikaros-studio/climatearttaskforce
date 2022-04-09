@@ -57,6 +57,7 @@
       </b-input-group>
     </div> -->
     <div class="d-flex">
+    
       <b-link to="/" class="text-muted mx-2 fw-light small">Artworks</b-link>
       <b-link to="/about" class="text-muted mx-2 small fw-light">About</b-link
       ><b-link

@@ -8,16 +8,16 @@
       ><b-card
         v-for="(el, index) in publications"
         :key="index"
-        text-variant="light"
-        border-variant="light"
-        bg-variant="dark"
+        border-variant=""
+        bg-variant="transparent"
         no-body
         class="mb-3"
       >
-        <b-card-header header-border-variant="light">
-          <h3
-            class="mb-0 d-flex align-items-center text-white font-weight-bold"
-          >
+        <b-card-header
+          header-bg-variant="transparent"
+          
+        >
+          <h3 class="mb-0 d-flex align-items-center font-weight-bold">
             {{ el.title }}
           </h3></b-card-header
         >
@@ -26,13 +26,12 @@
           {{ el.description }}
         </b-card-body>
         <b-card-footer
+          footer-bg-variant="transparent"
           class="d-flex align-items-center justify-content-between"
-          footer-border-variant="light"
+          
         >
-          <b-link class="d-block"
+          <b-link :href="el.link" target="_blank" class="d-block"
             >Read publication<b-icon
-              :href="el.link"
-              target="_blank"
               class="ml-1"
               icon="box-arrow-in-up-right"
             ></b-icon></b-link
@@ -41,16 +40,16 @@
       </b-card>
       <b-card
         :key="index"
-        text-variant="light"
-        border-variant="light"
-        bg-variant="dark"
+        bg-variant="transparent"
+        border-variant=""
         no-body
         class="mb-3"
       >
-        <b-card-header header-border-variant="light">
-          <h3
-            class="mb-0 d-flex align-items-center text-white font-weight-bold"
-          >
+        <b-card-header
+          header-bg-variant="transparent"
+          
+        >
+          <h3 class="mb-0 d-flex align-items-center font-weight-bold">
             Submit your own publication.
           </h3></b-card-header
         >
@@ -60,12 +59,12 @@
           fitting into the project.</b-card-body
         >
         <b-card-footer
+          footer-bg-variant="transparent"
           class="d-flex align-items-center justify-content-between"
-          footer-border-variant="light"
+          
         >
-          <b-link class="d-block"
+          <b-link href="mailto:contact@ikaros.studio" class="d-block"
             >Submit now<b-icon
-              href="mailto:contact@ikaros.studio"
               class="ml-1"
               icon="box-arrow-in-up-right"
             ></b-icon></b-link

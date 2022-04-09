@@ -54,6 +54,7 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/color-mode'
   ],
 
   bootstrapVue: {
