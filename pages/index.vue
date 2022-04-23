@@ -7,7 +7,7 @@
         <b-link
           href="https://www.artconnect.com/opportunity/ul_Y02MlSssJrrvE6q0vq"
           target="_blank"
-          class="m-0 text-decoration-none"
+          class="m-0 font-weight-bold text-decoration-none"
         >
           <i>open call for artists</i>
         </b-link>

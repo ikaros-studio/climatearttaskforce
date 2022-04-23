@@ -13,8 +13,11 @@
     "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.15.1",
+    "jsm": "^0.0.1",
     "nuxt": "^2.15.7",
     "p5": "^1.4.0",
+    "paper": "^0.12.15",
+    "three": "^0.139.2",
     "vue-country-flag": "^2.3.2",
     "vue-mobile-detection": "^2.0.1"
   },

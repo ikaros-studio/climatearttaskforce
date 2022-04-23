@@ -2,9 +2,11 @@
   <div>
     <NavBar></NavBar>
     <Nuxt class="min-vh-100" />
+
     <Title
       :artwork="artworks.find((el) => el.path == this.$route.path)"
     ></Title>
+
     <Footer></Footer>
   </div>
 </template>

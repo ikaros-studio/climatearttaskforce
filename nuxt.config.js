@@ -25,6 +25,10 @@ export default {
         href: 'https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,700&display=swap',
       },
     ],
+    script: [
+      { src: "~/assets/js/warp.js", mode: "client" }
+    ],
+
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -40,7 +44,9 @@ export default {
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+  ],
+
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -66,6 +72,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    transpile: ["three"],
     extend(config, ctx) {
       config.module.rules.push({
         test: /\.(ogg|mp3|wav|mpe?g)$/i,
