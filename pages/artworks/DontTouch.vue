@@ -1,5 +1,5 @@
 <template>
-  <div class="pl-5 w-100 vh-100">
+  <div class="pl-5 w-100 vh-100" style="touch-action: none">
     <svg id="svg-element" width="100%" height="100%" class="">
       <!-- <circle cx="500" cy="500" r="200" /> -->
       <g :transform="'translate(' + earthx + ',' + earthy + ')'">
@@ -67,6 +67,20 @@ export default {
 
     // window.addEventListener('mousedown', e => smudging = true)
     // window.addEventListener('mouseup', e => smudging = false)
+
+    window.addEventListener(
+      'touchmove',
+      function (e) {
+        mouseX = e.touches[0].clientX - earthXOrigin
+        mouseY = e.touches[0].clientY - earthYOrigin
+        mouseDeltaX = mouseX - lastMouseX
+        mouseDeltaY = mouseY - lastMouseY
+        lastMouseX = mouseX
+        lastMouseY = mouseY
+      },
+      false
+    )
+
     window.addEventListener('mousemove', function (e) {
       mouseX = e.clientX - earthXOrigin
       mouseY = e.clientY - earthYOrigin
@@ -75,7 +89,6 @@ export default {
       lastMouseX = mouseX
       lastMouseY = mouseY
     })
-
     function smudge([x, y]) {
       const pointX = x + originX
       const pointY = y + originY
@@ -134,6 +147,16 @@ export default {
       earthy: null,
     }
   },
-  methods: {},
+  methods: {
+    handleTouch(e) {
+      this.preventDefault
+      this.mouseX = this.clientX - this.earthXOrigin
+      this.mouseY = this.clientY - this.earthYOrigin
+      this.mouseDeltaX = this.mouseX - this.lastMouseX
+      this.mouseDeltaY = this.mouseY - this.lastMouseY
+      this.lastMouseX = this.mouseX
+      this.lastMouseY = this.mouseY
+    },
+  },
 }
 </script>
