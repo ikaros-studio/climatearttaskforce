@@ -41,8 +41,8 @@ export default {
   async mounted() {
     let brushSize = 70
     var earthXOrigin, earthYOrigin
-    if (!this.isMobile) {
-      earthXOrigin = window.innerWidth / 2 - 400
+    if (!this.isMobile()) {
+      earthXOrigin = window.innerWidth / 2 - 375
       earthYOrigin = window.innerHeight / 2 - 200
     } else {
       earthXOrigin = 0
