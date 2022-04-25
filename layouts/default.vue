@@ -1,12 +1,10 @@
 <template>
   <div>
     <NavBar></NavBar>
-    <Nuxt class="min-vh-100" />
-
-    <Title
+    <Nuxt :class="getClass()" />
+    <ArtworkDescription
       :artwork="artworks.find((el) => el.path == this.$route.path)"
-    ></Title>
-
+    ></ArtworkDescription>
     <Footer></Footer>
   </div>
 </template>
@@ -21,5 +19,35 @@ export default {
       artworks: artworks,
     }
   },
+  methods: {
+    isMobile() {
+      if (process.client) {
+        const width = window.innerWidth
+        if (width > 700) {
+          return false
+        } else {
+          return true
+        }
+      }
+    },
+    getClass() {
+      if (this.isMobile()) {
+        return 'mobilewidth'
+      } else {
+        return 'desktopwidth'
+      }
+    },
+  },
 }
 </script>
+
+<style>
+.mobilewidth {
+  min-height: 100vh;
+}
+
+.desktopwidth {
+  width: 75vw;
+  min-height: 100vh;
+}
+</style>

@@ -1,9 +1,5 @@
 <template>
-  <b-row
-    class="bg-continent min-vh-100 w-100 px-3"
-    align-v="center"
-    align-h="center"
-  >
+  <b-row class="bg-continent my-3 min-vh-100 px-3" align-v="center" align-h="center">
     <b-col md="7"
       ><b-card
         v-for="(el, index) in publications"
@@ -13,10 +9,7 @@
         no-body
         class="mb-3"
       >
-        <b-card-header
-          header-bg-variant="transparent"
-          
-        >
+        <b-card-header header-bg-variant="transparent">
           <h3 class="mb-0 d-flex align-items-center font-weight-bold">
             {{ el.title }}
           </h3></b-card-header
@@ -28,7 +21,6 @@
         <b-card-footer
           footer-bg-variant="transparent"
           class="d-flex align-items-center justify-content-between"
-          
         >
           <b-link :href="el.link" target="_blank" class="d-block"
             >Read publication<b-icon
@@ -45,10 +37,7 @@
         no-body
         class="mb-3"
       >
-        <b-card-header
-          header-bg-variant="transparent"
-          
-        >
+        <b-card-header header-bg-variant="transparent">
           <h3 class="mb-0 d-flex align-items-center font-weight-bold">
             Submit your own publication.
           </h3></b-card-header
@@ -61,7 +50,6 @@
         <b-card-footer
           footer-bg-variant="transparent"
           class="d-flex align-items-center justify-content-between"
-          
         >
           <b-link href="mailto:contact@ikaros.studio" class="d-block"
             >Submit now<b-icon

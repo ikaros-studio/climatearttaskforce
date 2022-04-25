@@ -1,5 +1,5 @@
 <template>
-  <div class="pl-5 w-100 vh-100" style="touch-action: none">
+  <div class="w-100 vh-100" style="touch-action: none">
     <svg id="svg-element" width="100%" height="100%" class="">
       <!-- <circle cx="500" cy="500" r="200" /> -->
       <g :transform="'translate(' + earthx + ',' + earthy + ')'">
@@ -40,9 +40,14 @@ export default {
 
   async mounted() {
     let brushSize = 70
-
-    let earthXOrigin = window.innerWidth / 2 - 250
-    let earthYOrigin = window.innerHeight / 2 - 200
+    var earthXOrigin, earthYOrigin
+    if (!this.isMobile) {
+      earthXOrigin = window.innerWidth / 2 - 400
+      earthYOrigin = window.innerHeight / 2 - 200
+    } else {
+      earthXOrigin = 0
+      earthYOrigin = 100
+    }
 
     this.earthx = earthXOrigin
     this.earthy = earthYOrigin
@@ -148,6 +153,16 @@ export default {
     }
   },
   methods: {
+    isMobile() {
+      if (process.client) {
+        const width = window.innerWidth
+        if (width > 700) {
+          return false
+        } else {
+          return true
+        }
+      }
+    },
     handleTouch(e) {
       this.preventDefault
       this.mouseX = this.clientX - this.earthXOrigin

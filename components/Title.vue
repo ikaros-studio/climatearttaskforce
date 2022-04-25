@@ -1,5 +1,5 @@
 <template>
-  <div v-if="artwork">
+  <div v-if="artwork && isMobile()">
     <div
       variant="dark"
       class="
@@ -27,7 +27,7 @@
       <small>This is the artorks description</small>
     </b-collapse> -->
     </div>
-    <b-button
+    <!-- <b-button
       v-b-modal="'description-modal'"
       size="sm"
       variant="outline-dark"
@@ -90,14 +90,13 @@
           ></b-link>
         </div>
       </template>
-    </b-modal>
+    </b-modal> -->
   </div>
 </template>
 <script>
 import Vue from 'vue'
 import CountryFlag from 'vue-country-flag'
 Vue.component('country-flag', CountryFlag)
-import artworks from '../assets/js/artworks'
 export default {
   components: {
     CountryFlag,
@@ -106,10 +105,20 @@ export default {
   props: ['artwork'],
   data() {
     return {
-      showdescription: false,
     }
   },
-  methods: {},
+  methods: {
+    isMobile() {
+      if (process.client) {
+        const width = window.innerWidth
+        if (width > 700) {
+          return false
+        } else {
+          return true
+        }
+      }
+    },
+  },
 }
 </script>
 <style>
