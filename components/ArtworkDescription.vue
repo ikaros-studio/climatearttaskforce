@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="artwork">
     <div v-if="!isMobile()" class="pt-5">
       <div
         v-if="artwork"
@@ -128,8 +128,8 @@
       </div>
     </div>
     <!-- FOR MOBILE USERS -->
-    <div v-if="artwork && isMobile()">
-      <div class="description-box-phone w-100 px-3 z-100  small">
+    <div v-else>
+      <div class="description-box-phone w-100 px-3 z-100 small">
         <p class="mt-5">
           {{ artwork.artist }} ({{ artwork.country }}),
           <b> {{ artwork.title }}</b>
@@ -157,7 +157,6 @@
           ></b-link>
         </div>
       </div>
-      
     </div>
   </div>
 </template>
