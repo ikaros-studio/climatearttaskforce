@@ -17,6 +17,9 @@ const artworks = [
     coverlink:
       'https://media2.giphy.com/media/3oKIPAX6QjYLp3ZJTi/giphy.gif?cid=ecf05e47dxkpji5mthoryketuflnlx7apl28rutopfekc8h3&rid=giphy.gif&ct=g',
     path: '/artworks/donttouch',
+    artistwebsite: 'https://www.ikaros.studio/',
+    artistinstagram: 'https://www.instagram.com/ikaros.studio/',
+
   },
   {
     title: 'Blah Blah Blah',

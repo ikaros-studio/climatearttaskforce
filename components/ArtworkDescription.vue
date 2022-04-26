@@ -1,162 +1,156 @@
 <template>
-  <div v-if="artwork">
-    <div v-if="!isMobile()" class="pt-5">
-      <div
-        v-if="artwork"
-        variant="dark"
-        class="
-          p-4
-          overflow-auto
-          h-100
-          bg-white
-          z-50
-          px-2
-          border border-right
-          lh-1
-          text-dark
-          description-box
-          pt-5
-          mt-5
-        "
-      >
-        <p class="mt-5">
-          {{ artwork.artist }} ({{ artwork.country }}),
-          <b> {{ artwork.title }}</b>
-        </p>
-        <hr />
-        <small class="fw-light">{{ artwork.description }}</small>
-        <hr />
-        <div class="w-100 text-left">
-          <b-link class="small"
-            >Artist Website<b-icon
-              :href="artwork.artistwebsite"
+  <div>
+    <div v-if="artwork">
+      <div v-if="!isMobile()" class="pt-5">
+        <div
+          v-if="artwork"
+          variant="dark"
+          class="
+            p-4
+            overflow-auto
+            h-100
+            bg-white
+            z-50
+            px-2
+            border border-right
+            lh-1
+            text-dark
+            description-box
+            pt-5
+            mt-5
+          "
+        >
+          <p class="mt-4">
+            {{ artwork.artist }} ({{ artwork.country }}),
+            <b> {{ artwork.title }}</b>
+          </p>
+          <hr />
+          <small class="fw-light">{{ artwork.description }}</small>
+          <hr />
+          <div class="w-100 text-left">
+            <b-link target="_blank" :href="artwork.artistwebsite" class="small"
+              >Artist Website<b-icon
+                class="ml-1"
+                icon="box-arrow-in-up-right"
+              ></b-icon
+            ></b-link>
+            <b-link
+              class="small ml-3"
+              :href="artwork.artistinstagram"
               target="_blank"
-              class="ml-1"
-              icon="box-arrow-in-up-right"
-            ></b-icon
-          ></b-link>
-          <b-link
-            class="small ml-3"
-            :href="artwork.artistinstagram"
-            target="_blank"
-            >Instragram<b-icon
-              class="ml-1"
-              icon="box-arrow-in-up-right"
-            ></b-icon
-          ></b-link>
+              >Instragram<b-icon
+                class="ml-1"
+                icon="box-arrow-in-up-right"
+              ></b-icon
+            ></b-link>
+          </div>
         </div>
       </div>
-      <div
-        v-else
-        variant="dark"
-        class="
-          p-4
-          overflow-auto
-          h-100
-          bg-white
-          z-50
-          px-2
-          border border-right
-          lh-1
-          text-dark
-          description-box
-          pt-5
-          mt-5
-        "
-      >
-        <p class="mt-5 catfont text-uppercase text-dark">
-          The climate art taskforce
-        </p>
-        <small class="fw-light"
-          >The climate art taskforce (<i>CAT</i>) is a global alliance of
-          interdisciplinary digital artists against climate change. Based on an
-          open source platform, <i>CAT</i> curates and publishes digital
-          artworks & publications making climate change accessible and
-          approachable for a non-expert audience. <i>CAT</i> invites digital
-          practitioners to contribute with their own relating digital works.
-
-          <br /><br />
-          With it’s open source approach, <i>CAT</i> aims to be inclusive
-          towards all kinds of artists and art formats relating to climate
-          change, everyone is welcome to contribute. Selected artworks and the
-          platform itself are constantly curated for external projects and
-          campaigns.
-          <br />
-          <br />
-          The source code is available through
-          <b-link
-            href="https://github.com/ikarosstudios/climatearttaskforce"
-            target="_blank"
-            class="d-inline"
-            >www.github.com/ikarosstudios/climatearttaskforce</b-link
-          >
-          <br />
-          <br />All submissions are welcomed through
-          <b-link href="mailto:contact@ikaros.studio" target="_blank"
-            >contact@ikaros.studio</b-link
-          >
-          or direct repository pull requests.
-          <br />
-          <br />
-        </small>
-        <hr />
-        <div class="w-100 text-left">
-          <b-link class="small"
-            >Artist Website<b-icon
+      <!-- FOR MOBILE USERS -->
+      <div v-if="isMobile()">
+        <div class="description-box-phone w-100 px-3 z-100 small">
+          <p class="mt-5">
+            {{ artwork.artist }} ({{ artwork.country }}),
+            <b> {{ artwork.title }}</b>
+          </p>
+          <hr />
+          <small class="fw-light">{{ artwork.description }}</small>
+          <hr />
+          <div class="w-100 mb-3 text-left">
+            <b-link target="_blank" :href="artwork.artistwebsite" class="small"
+              >Artist Website<b-icon
+                class="ml-1"
+                icon="box-arrow-in-up-right"
+              ></b-icon
+            ></b-link>
+            <b-link
+              class="small ml-3"
+              :href="artwork.artistinstagram"
               target="_blank"
-              class="ml-1"
-              icon="box-arrow-in-up-right"
-            ></b-icon
-          ></b-link>
-          <b-link class="small ml-3" target="_blank"
-            >Instragram<b-icon
-              class="ml-1"
-              icon="box-arrow-in-up-right"
-            ></b-icon
-          ></b-link>
+              >Instragram<b-icon
+                class="ml-1"
+                icon="box-arrow-in-up-right"
+              ></b-icon
+            ></b-link>
+          </div>
         </div>
-        <hr />
-
-        <b-button
-          variant="outline-dark"
-          size="sm"
-          href="https://www.artconnect.com/opportunity/ul_Y02MlSssJrrvE6q0vq"
-          target="_blank"
-          class="rounded-0 text-uppercase text-decoration-none"
-          >Be part of the taskforce</b-button
-        >
       </div>
     </div>
-    <!-- FOR MOBILE USERS -->
-    <div v-else>
-      <div class="description-box-phone w-100 px-3 z-100 small">
-        <p class="mt-5">
-          {{ artwork.artist }} ({{ artwork.country }}),
-          <b> {{ artwork.title }}</b>
-        </p>
-        <hr />
-        <small class="fw-light">{{ artwork.description }}</small>
-        <hr />
-        <div class="w-100 mb-3 text-left">
-          <b-link class="small"
-            >Artist Website<b-icon
-              :href="artwork.artistwebsite"
-              target="_blank"
-              class="ml-1"
-              icon="box-arrow-in-up-right"
-            ></b-icon
-          ></b-link>
-          <b-link
-            class="small ml-3"
-            :href="artwork.artistinstagram"
+    <div
+      v-else-if="!artwork && !isMobile()"
+      variant="dark"
+      class="
+        p-4
+        overflow-auto
+        h-100
+        bg-white
+        z-50
+        px-2
+        border border-right
+        lh-1
+        text-dark
+        description-box
+        pt-5
+        mt-5
+      "
+    >
+      <p class="mt-5 catfont text-uppercase text-dark">
+        The climate art taskforce
+      </p>
+      <small class="fw-light"
+        >The climate art taskforce (<i>CAT</i>) is a global alliance of
+        interdisciplinary digital artists against climate change. Based on an
+        open source platform, <i>CAT</i> curates and publishes digital artworks
+        & publications making climate change accessible and approachable for a
+        non-expert audience. <i>CAT</i> invites digital practitioners to
+        contribute with their own relating digital works.
+
+        <br /><br />
+        With it’s open source approach, <i>CAT</i> aims to be inclusive towards
+        all kinds of artists and art formats relating to climate change,
+        everyone is welcome to contribute. Selected artworks and the platform
+        itself are constantly curated for external projects and campaigns.
+        <br />
+        <br />
+        The source code is available through
+        <b-link
+          href="https://github.com/ikarosstudios/climatearttaskforce"
+          target="_blank"
+          class="d-inline"
+          >www.github.com/ikarosstudios/climatearttaskforce</b-link
+        >
+        <br />
+        <br />All submissions are welcomed through
+        <b-link href="mailto:contact@ikaros.studio" target="_blank"
+          >contact@ikaros.studio</b-link
+        >
+        or direct repository pull requests.
+        <br />
+        <br />
+      </small>
+      <hr />
+      <div class="w-100 text-left">
+        <b-link class="small"
+          >Artist Website<b-icon
             target="_blank"
-            >Instragram<b-icon
-              class="ml-1"
-              icon="box-arrow-in-up-right"
-            ></b-icon
-          ></b-link>
-        </div>
+            class="ml-1"
+            icon="box-arrow-in-up-right"
+          ></b-icon
+        ></b-link>
+        <b-link class="small ml-3" target="_blank"
+          >Instragram<b-icon class="ml-1" icon="box-arrow-in-up-right"></b-icon
+        ></b-link>
       </div>
+      <hr />
+
+      <b-button
+        variant="outline-dark"
+        size="sm"
+        href="https://www.artconnect.com/opportunity/ul_Y02MlSssJrrvE6q0vq"
+        target="_blank"
+        class="rounded-0 text-uppercase text-decoration-none"
+        >Be part of the taskforce</b-button
+      >
     </div>
   </div>
 </template>
@@ -200,6 +194,6 @@ export default {
 }
 
 .description-box-phone {
-  margin-top: -20vh;
+  margin-top: -25vh;
 }
 </style>
