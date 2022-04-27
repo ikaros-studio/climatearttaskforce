@@ -12,7 +12,7 @@ const artworks = [
     title: 'DO NOT TOUCH!',
     artist: 'Alexander Doudkin',
     country: 'DE',
-    description: "DO NOT TOUCH! deals with the human relationship with planet earth. For centuries, humans have invoked a new geochronological epoque: the anthropocene. It defines the epoque in which the human hand makes the most significant impact on the overall biolgical, geological and athmospheric processes  on the planet. DO NOT TOUCH! invites the viewer to touch the planet and feel humanities potential impact on it.  ",
+    description: "DO NOT TOUCH! deals with the human relationship with planet earth. For centuries, humans have invoked a new geochronological epoque: the anthropocene. It defines the epoque in which the human hand makes the most significant impact on the overall biolgical, geological and athmospheric processes on the planet. DO NOT TOUCH! invites the viewer to touch the planet and feel humanities potential impact on it. In times of the global crisis it is evident that the world is literally melting away, by the human-hand.  ",
     keywords: ['melting'],
     coverlink:
       'https://media2.giphy.com/media/3oKIPAX6QjYLp3ZJTi/giphy.gif?cid=ecf05e47dxkpji5mthoryketuflnlx7apl28rutopfekc8h3&rid=giphy.gif&ct=g',

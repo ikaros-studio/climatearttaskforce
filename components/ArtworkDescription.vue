@@ -129,26 +129,12 @@
         <br />
       </small>
       <hr />
-      <div class="w-100 text-left">
-        <b-link class="small"
-          >Artist Website<b-icon
-            target="_blank"
-            class="ml-1"
-            icon="box-arrow-in-up-right"
-          ></b-icon
-        ></b-link>
-        <b-link class="small ml-3" target="_blank"
-          >Instragram<b-icon class="ml-1" icon="box-arrow-in-up-right"></b-icon
-        ></b-link>
-      </div>
-      <hr />
-
       <b-button
         variant="outline-dark"
         size="sm"
         href="https://www.artconnect.com/opportunity/ul_Y02MlSssJrrvE6q0vq"
         target="_blank"
-        class="rounded-0 text-uppercase text-decoration-none"
+        class="rounded-0 text-uppercase border-danger text-decoration-none"
         >Be part of the taskforce</b-button
       >
     </div>
